@@ -1,4 +1,7 @@
 # Automação de testes web
-## Ferramentas utilizadas
+## Ferramentas/Tecnologias utilizadas
+* Java
 * Selenium
 * Cucumber
+* Maven
+* JUnit
