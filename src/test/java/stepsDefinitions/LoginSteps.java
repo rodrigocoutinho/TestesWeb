@@ -10,18 +10,21 @@ import static utils.Utils.*;
 
 public class LoginSteps {
 
-    LoginPage lp = new LoginPage();
+    //LoginPage lp = new LoginPage();
     @Quando("eu informar o usuario {string}")
     public void euInformarOUsuario(String usuario) {
-        lp.informarCampoUsuario(usuario);
+        //lp.informarCampoUsuario(usuario);
+        Na(LoginPage.class).informarCampoUsuario(usuario);
     }
     @Quando("informar a senha {string}")
     public void informarASenha(String senha) {
-        lp.informarCampoSenha(senha);
+        //lp.informarCampoSenha(senha);
+        Na(LoginPage.class).informarCampoSenha(senha);
     }
     @Quando("clicar no botao login")
     public void clicarNoBotaoLogin() {
-        lp.acionarBotaoLogin();
+        //lp.acionarBotaoLogin();
+        Na(LoginPage.class).acionarBotaoLogin();
     }
     @Entao("o sistema exibe a mensagem usuario invalido")
     public void oSistemaExibeAMensagemUsuarioInvalido() {
