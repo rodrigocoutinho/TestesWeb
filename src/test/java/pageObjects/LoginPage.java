@@ -15,6 +15,10 @@ public class LoginPage {
 
     @FindBy(name = "Submit")
     private WebElement botaoLogin;
+
+    @FindBy(xpath = "//span[text()='( Username: Admin | Password : admin123 )']")
+    private WebElement link;
+
     public void informarCampoUsuario(String usuario){
         campoUsuario.sendKeys(usuario);
     }

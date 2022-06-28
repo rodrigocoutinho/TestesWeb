@@ -34,6 +34,5 @@ public class LoginSteps {
     @Entao("o sistema exibe o usuario logado")
     public void oSistemaExibeOUsuarioLogado() {
         assertEquals("Welcome Paul", driver.findElement(By.id("welcome")).getText());
-
     }
 }
