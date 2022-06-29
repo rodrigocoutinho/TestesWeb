@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty"},
         features = "src/test/resources/features",
         glue = "stepsDefinitions",
-        tags = "@CadastrarUsuario", // Executa somente o cenário especifico.
+        tags = "@dropdown", // Executa somente o cenário especifico.
         snippets = CucumberOptions.SnippetType.CAMELCASE, //Cria os metodos em camelcase, conforme boas praticas
         monochrome = true,
         dryRun = false   // se true, gera estrutura dos métodos que estão faltando e não executa os tests propriamente
