@@ -2,7 +2,10 @@ package stepsDefinitions;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import pageObjects.LoginPage;
+
+import java.io.IOException;
 
 import static utils.Utils.*;
 
@@ -14,7 +17,7 @@ public class Hooks {
     ex: @Before(order = 2, value = "@outro")
     */
 
-    @Before
+    @Before (value = "not @login")
     public void setUp(){
         acessarSistema();
         Na(LoginPage.class).realizarLogin("Admin", "admin123");
@@ -26,7 +29,8 @@ public class Hooks {
     }
 
     @After
-    public void tearDown(){
-//        driver.quit();    //fecha o navegador
+    public void tearDown(Scenario scenario) throws IOException {
+        capturarTela(scenario);
+        driver.quit();    //fecha o navegador
     }
 }
